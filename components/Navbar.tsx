@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Navbar = () => {
     return (
-        <div className='flex justify-between items-center p-4 w-full'>
+        <div className='flex justify-between items-center py-7  w-full'>
             <div>
                 <h1 className='text-2xl font-bold'>{`<Ayush Dixit />`}</h1>
             </div>
