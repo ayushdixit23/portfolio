@@ -5,16 +5,16 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center p-4 w-full'>
             <div>
-                <h1 className='text-xl'>{`<Ayush Dixit />`}</h1>
+                <h1 className='text-2xl font-bold'>{`<Ayush Dixit />`}</h1>
             </div>
             <div>
                 <nav>
                     <ul className='flex gap-8 '>
-                        <li className='text-[#E6E6E6] hover:text-white cursor-pointer'>Home</li>
-                        <li className='text-[#E6E6E6] hover:text-white cursor-pointer'>About</li>
-                        <li className='text-[#E6E6E6] hover:text-white cursor-pointer'>Projects</li>
-                        <li className='text-[#E6E6E6] hover:text-white cursor-pointer'>Blog</li>
-                        <li className='text-[#E6E6E6] hover:text-white cursor-pointer'>Contact</li>
+                        <li className='hover:text-[#E6E6E6] text-[#E6E6E6] cursor-pointer'>Home</li>
+                        <li className='hover:text-[#E6E6E6] text-[#E6E6E6]/50 cursor-pointer'>About</li>
+                        <li className='hover:text-[#E6E6E6] text-[#E6E6E6]/50 cursor-pointer'>Projects</li>
+                        <li className='hover:text-[#E6E6E6] text-[#E6E6E6]/50 cursor-pointer'>Blog</li>
+                        <li className='hover:text-[#E6E6E6] text-[#E6E6E6]/50 cursor-pointer'>Contact</li>
                     </ul>
                 </nav>
             </div>
