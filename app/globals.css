@@ -53,3 +53,13 @@ body {
   border-radius: inherit;
   pointer-events: none;
 }
+
+/* text-transparent bg-clip-text */
+.text-initial {
+  color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-white-top {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.65));
+}
