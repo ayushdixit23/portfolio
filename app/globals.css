@@ -34,6 +34,10 @@ body {
   }
 }
 
+.centralise-text{
+  @apply text-4xl text-center font-medium
+}
+
 .shimmer::before {
   content: "";
   position: absolute;
