@@ -1,5 +1,6 @@
 import React from "react";
 import TerminalComponent from "./TerminalComponent";
+import OrbitComponent from "./OrbitComponent";
 
 const AboutMeGrid = () => {
   return (
@@ -7,16 +8,24 @@ const AboutMeGrid = () => {
       <div className="grid grid-cols-3 gap-4 w-full">
         <div className="flex flex-col gap-4 w-full">
           <div className="w-full h-[260px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform"></div>
+
           <div className="w-full h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-            <TerminalComponent />
+            <OrbitComponent />
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform"></div>
-          <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform"></div>
+          <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+
+          </div>
+
+          <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+            <TerminalComponent /></div>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="w-full h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform"></div>
+          <div className="w-full h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+
+          </div>
+
           <div className="w-full h-[260px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform"></div>
         </div>
       </div>

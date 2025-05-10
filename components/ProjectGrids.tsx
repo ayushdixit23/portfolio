@@ -62,7 +62,7 @@ const ProjectGrids = () => {
                                     {project.title}
                                 </h1>
                             </div>
-                            <div className="flex justify-between items-center font-medium ">
+                            <div className="flex justify-between text-white/90 items-center font-medium ">
                                 <p>{project.category}</p>
                                 <p>{project.date}</p>
                             </div>
