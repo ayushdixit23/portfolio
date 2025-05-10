@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center py-7  w-full'>
             <div>
-                <h1 className='text-2xl font-bold'>{`<Ayush Dixit />`}</h1>
+                <h1 className='text-[26px] text-initial bg-gradient-white-top font-bold'>{`<Ayush Dixit />`}</h1>
             </div>
             <div>
                 <nav>

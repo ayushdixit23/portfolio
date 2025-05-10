@@ -1,4 +1,3 @@
-import { i } from "motion/react-client";
 import Image from "next/image";
 import React from "react";
 import chatProject from "../public/assets/chatproject.png";
