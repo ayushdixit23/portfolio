@@ -3,6 +3,7 @@ import TerminalComponent from "./TerminalComponent";
 import OrbitComponent from "./OrbitComponent";
 import { IconCloudDemo } from "./IconCloud";
 import CodeComponent from "./CodeComponent";
+import AnimationBeamComponent from "./AnimationBeamComponent";
 
 const AboutMeGrid = () => {
   return (
@@ -19,18 +20,19 @@ const AboutMeGrid = () => {
         </div>
         <div className="flex flex-col gap-4 w-full">
           <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-                    <TerminalComponent />
+            <TerminalComponent />
           </div>
 
           <div className="w-full h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-</div>
+        <AnimationBeamComponent/>
+          </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
           <div className="w-full h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <OrbitComponent /> </div>
 
           <div className="w-full h-[260px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-          <CodeComponent />
+            <CodeComponent />
           </div>
         </div>
       </div>
