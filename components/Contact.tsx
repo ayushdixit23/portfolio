@@ -3,7 +3,6 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { GrGithub } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
-// import BG from "@/public/assets/grid.svg";
 
 const SocialIcon = ({ Icon, href }: { Icon: React.ElementType, href: string }) => {
     return (
