@@ -4,6 +4,7 @@ import OrbitComponent from "./OrbitComponent";
 import { IconCloudDemo } from "./IconCloud";
 import CodeComponent from "./CodeComponent";
 import AnimationBeamComponent from "./AnimationBeamComponent";
+import { Globe } from "@/components/Globe";
 
 const AboutMeGrid = () => {
   return (
@@ -15,7 +16,7 @@ const AboutMeGrid = () => {
           </div>
 
           <div className="w-full h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-
+<Globe/>
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
