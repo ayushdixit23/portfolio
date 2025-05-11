@@ -15,7 +15,7 @@ const About = () => {
             spec.
           </p>
           <div>
-            <button className="py-2 px-7 text-white font-medium rounded-full bg-gradient-to-t from-[#5532E2] to-[#6949E7]">
+            <button className="py-2 px-7 text-white font-medium rounded-full bg-gradient-to-b from-emerald-400 to-emerald-800">
               See developer experience
             </button>
           </div>
