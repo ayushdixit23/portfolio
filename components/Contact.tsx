@@ -16,9 +16,9 @@ const Contact = () => {
     return (
         <div className="w-full flex-col flex justify-center my-16 items-center">
             <div className="max-w-[85%] overflow-hidden relative">
-                <div className="absolute inset-0 bg-[url('/assets/grid.svg')] opacity-[7%] overflow-hidden -z-20 bg-center w-full"></div>
+                <div className="absolute inset-0 bg-[url('/assets/grid.svg')] opacity-[6%] overflow-hidden -z-20 bg-center w-full"></div>
                 <div
-                    className="flex flex-col gap-8 w-full z-20 py-16 border overflow-hidden rounded-3xl border-[#3ECF8E]/20  justify-center items-center shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)]">
+                    className="flex flex-col gap-8 w-full z-20 py-16 border overflow-hidden rounded-3xl border-[#3ECF8E]/10  justify-center items-center shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)]">
                     <h1 className="text-initial z-10 centralise-text bg-gradient-white-top">
                         Let’s Build Something Great Together
                     </h1>
@@ -32,7 +32,7 @@ const Contact = () => {
                             href="https://mail.google.com/mail/?view=cm&to=fsayush100@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-2 px-7 cursor-pointer flex justify-center items-center gap-2 text-white/80 font-medium rounded-full bg-gradient-to-b from-emerald-400 to-emerald-800"
+                            className="py-2 px-7 cursor-pointer flex justify-center items-center gap-2 text-white/80 font-medium rounded-full bg-gradient-to-b from-emerald-400 to-emerald-800 hover:from-emerald-500 hover:to-emerald-900 transition duration-300"
                         >
                             <IoMail size={18} />
                             <div>Contact Me</div>
