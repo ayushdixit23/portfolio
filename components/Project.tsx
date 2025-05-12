@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectGrids from './ProjectGrids'
+// import ProjectGrids from './ProjectGrids'
 
 const Project = () => {
     return (
@@ -9,7 +9,7 @@ const Project = () => {
                 <p className='text-[20px] leading-snug text-white/70'>From sleek user interfaces to full-scale applications, here's a selection of projects I’m most proud of. Each one tells a story of creativity, code, and real-world impact.</p>
             </div>
 
-            <ProjectGrids />
+            {/* <ProjectGrids /> */}
         </div>
     )
 }

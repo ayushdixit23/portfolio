@@ -48,7 +48,7 @@ const ProjectGrids = () => {
                 {projectData.map((project, index) => (
                     <div
                         key={index}
-                        className=" bg-gradient-to-t from-[#202020] to-[#202020] border border-white/10 flex flex-col rounded-2xl p-7 shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.8)] transition-shadow duration-300">
+                        className="bg-[#fff]/10 border border-white/10 flex flex-col rounded-2xl p-7">
                         <div className="rounded-2xl overflow-hidden border border-[#1F1F1F] shadow-inner bg-[#1A1A1D]">
                             <Image
                                 src={chatProject}

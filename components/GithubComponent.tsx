@@ -1,7 +1,6 @@
 import GitHubCalendar from 'react-github-calendar';
 
 const GithubStatsSection = () => {
-
     return (
         <div className="w-full py-16 text-white/70 px-6">
             <div>
@@ -9,7 +8,7 @@ const GithubStatsSection = () => {
                     GitHub Stats
                 </h2>
 
-                <div className="grid grid-cols-1 mt-12 md:grid-cols-6 lg:grid-cols-10 gap-6 mb-6">
+                <div className="grid grid-cols-1 mt-12 md:grid-cols-6 lg:grid-cols-10 gap-6 ">
                     <div className={`border border-white/10 rounded-3xl col-span-full p-6`}>
                         <h3 className="text-lg font-medium mb-4 text-white/90">Contribution Calendar</h3>
                         <div className="w-full flex justify-center items-center overflow-x-auto">
@@ -67,20 +66,6 @@ const GithubStatsSection = () => {
                                 src="https://github-readme-streak-stats.herokuapp.com/?user=ayushdixit23&theme=radical&background=00000000&hide_border=true"
                                 alt="GitHub Streak"
                                 className="max-w-full h-[200px]"
-                            />
-                        </div>
-                    </div>
-
-                    <div className={`border border-white/10 rounded-3xl col-span-full flex flex-col`}>
-                        <div className="p-6 pb-3">
-                            <h3 className="text-lg font-medium mb-2 text-white/90">GitHub Trophies</h3>
-                            <p className="text-sm text-gray-400">Special achievements and milestones</p>
-                        </div>
-                        <div className="mt-auto p-4 flex justify-center overflow-x-auto">
-                            <img
-                                src="https://github-profile-trophy.vercel.app/?username=ayushdixit23&theme=radical&column=7&no-frame=true&no-bg=true"
-                                alt="GitHub Trophies"
-                                className="max-w-full h-auto min-w-max"
                             />
                         </div>
                     </div>
