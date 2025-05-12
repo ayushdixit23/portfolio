@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectForLanding from './ProjectForLanding'
 // import ProjectGrids from './ProjectGrids'
 
 const Project = () => {
@@ -10,6 +11,7 @@ const Project = () => {
             </div>
 
             {/* <ProjectGrids /> */}
+            <ProjectForLanding/>
         </div>
     )
 }

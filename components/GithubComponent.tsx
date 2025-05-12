@@ -25,7 +25,6 @@ const GithubStatsSection = () => {
                                 colorScheme="dark"
                             />
                         </div>
-
                     </div>
 
                     <div className={`border border-white/10 rounded-3xl md:col-span-3 lg:col-span-4 flex flex-col`}>
