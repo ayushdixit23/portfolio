@@ -390,7 +390,7 @@ div[data-node-type="callout"] {
 }
 
 .blog-content pre {
-  @apply text-gray-100 rounded-lg p-5 my-6 overflow-x-auto border border-gray-700/20 relative;
+  @apply text-gray-100 select-all rounded-lg p-5 my-6 overflow-x-auto border border-gray-700/20 relative;
 
   background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 52%, rgba(17, 17, 17, 1) 100%);
   scrollbar-width: thin;
