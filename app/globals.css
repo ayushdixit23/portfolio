@@ -220,8 +220,240 @@
   }
 }
 
-/* .background {
-background: #0A0A0C;
-background: radial-gradient(circle, rgba(10, 10, 12, 1) 0%, rgba(51, 51, 51, 1) 50%, rgba(10, 10, 12, 1) 100%);} */
+/* Base typography and layout */
+.blog-content {
+  @apply max-w-6xl mx-auto text-lg leading-relaxed;
+}
 
-/* Articles */
+/* Headings with proper spacing and styling */
+.blog-content h1 {
+  @apply text-4xl font-bold mt-10 mb-6;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-bold mt-6 mb-3;
+}
+
+.blog-content h4 {
+  @apply text-xl font-bold mt-5 mb-2;
+}
+
+/* Paragraph spacing */
+.blog-content p {
+  @apply my-6;
+}
+
+/* Links with better hover states */
+.blog-content a {
+  @apply text-blue-400 underline transition-colors duration-200;
+}
+
+.blog-content a:hover {
+  @apply text-blue-300;
+}
+
+/* Lists with proper indentation and spacing */
+.blog-content ul, .blog-content ol {
+  @apply my-6 pl-8;
+}
+
+.blog-content ul {
+  @apply list-disc;
+}
+
+.blog-content ol {
+  @apply list-decimal;
+}
+
+.blog-content li {
+  @apply mb-2;
+}
+
+.blog-content li:last-child {
+  @apply mb-0;
+}
+
+/* Blockquotes with more hashnode-like styling */
+.blog-content blockquote {
+  @apply border-l-4 border-blue-500 bg-gray-800/30 pl-6 py-4 pr-4 my-6 italic rounded-r;
+}
+
+/* Images */
+.blog-content img {
+  @apply rounded-lg my-8 max-w-full mx-auto shadow-lg;
+}
+
+/* Syntax highlighting - similar to Hashnode */
+.blog-content .token.comment,
+.blog-content .token.prolog,
+.blog-content .token.doctype,
+.blog-content .token.cdata {
+  @apply text-gray-500;
+}
+
+.blog-content .token.punctuation {
+  @apply text-gray-400;
+}
+
+.blog-content .token.property,
+.blog-content .token.tag,
+.blog-content .token.boolean,
+.blog-content .token.number,
+.blog-content .token.constant,
+.blog-content .token.symbol {
+  @apply text-green-400;
+}
+
+.blog-content .token.selector,
+.blog-content .token.attr-name,
+.blog-content .token.string,
+.blog-content .token.char,
+.blog-content .token.builtin {
+  @apply text-blue-400;
+}
+
+.blog-content .token.operator,
+.blog-content .token.entity,
+.blog-content .token.url,
+.blog-content .language-css .token.string,
+.blog-content .style .token.string {
+  @apply text-yellow-300;
+}
+
+.blog-content .token.atrule,
+.blog-content .token.attr-value,
+.blog-content .token.keyword {
+  @apply text-purple-400;
+}
+
+.blog-content .token.function,
+.blog-content .token.class-name {
+  @apply text-pink-400;
+}
+
+/* Callouts with better styling */
+div[data-node-type="callout"] {
+  @apply flex gap-4 bg-blue-900/30 border border-blue-700 rounded-lg p-5 my-6;
+}
+
+/* Tables */
+.blog-content table {
+  @apply w-full my-6 border-collapse;
+}
+
+.blog-content table th {
+  @apply bg-gray-800 p-3 text-left border border-gray-700;
+}
+
+.blog-content table td {
+  @apply p-3 border border-gray-700;
+}
+
+.blog-content table tr:nth-child(even) {
+  @apply bg-gray-800/50;
+}
+
+/* Horizontal rule */
+.blog-content hr {
+  @apply my-10 border-gray-700;
+}
+
+/* Cover image enhancement */
+.cover-image {
+  @apply w-full object-cover rounded-lg mb-8;
+}
+
+/* Author section styling */
+.author-section {
+  @apply flex items-center justify-center my-8 gap-3;
+}
+
+.author-image {
+  @apply rounded-full h-12 w-12 border-2 border-blue-500;
+}
+
+.author-name {
+  @apply text-xl font-medium text-gray-200;
+}
+
+/* Post title and subtitle */
+.post-title {
+  @apply text-4xl lg:text-5xl text-center leading-tight font-bold mt-8 mb-4 text-white;
+}
+
+.post-subtitle {
+  @apply text-xl lg:text-2xl text-center font-medium my-4 mt-6 leading-snug text-gray-300;
+}
+
+.blog-content pre {
+  @apply text-gray-100 rounded-lg p-5 my-6 overflow-x-auto border border-gray-700/20 relative;
+
+  background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 52%, rgba(17, 17, 17, 1) 100%);
+  scrollbar-width: thin;
+  scrollbar-color: #4B5563 #111827; /* Use actual color codes instead of theme() */
+}
+
+/* Inline code styling */
+.blog-content code {
+  @apply bg-gray-800/80 text-blue-300 px-2 py-0.5 rounded text-sm font-mono border border-gray-700/30;
+}
+
+/* Fix for code inside pre blocks */
+.blog-content pre code {
+  @apply bg-transparent border-0 p-0 text-gray-100 text-base block;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, monospace;
+  line-height: 1.6;
+}
+
+/* Make scrollbars look better */
+.blog-content pre::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+.blog-content pre::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.blog-content pre::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+.blog-content pre::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Code block language label */
+.blog-content pre[data-language]::after {
+  @apply block absolute top-1.5 right-3 text-xs text-gray-400 font-mono px-2 py-0.5 bg-gray-800/80 rounded uppercase tracking-wide;
+  content: attr(data-language);
+}
+
+
+/* Code line numbering */
+.blog-content pre.line-numbers {
+  @apply pl-14 relative;
+  counter-reset: line;
+}
+
+.blog-content pre.line-numbers code {
+  counter-reset: line;
+}
+
+.blog-content pre.line-numbers code > span {
+  @apply block relative;
+  counter-increment: line;
+}
+
+.blog-content pre.line-numbers code > span::before {
+  @apply absolute -left-10 text-gray-500 text-xs w-8 text-right pr-2 select-none;
+  content: counter(line);
+}
+
+/* Line highlighting */
+.blog-content pre .highlight-line {
+  @apply bg-black/20 -mx-5 px-5 border-l-2 border-blue-500 block;
+}
