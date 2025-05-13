@@ -1,12 +1,13 @@
+import Link from 'next/link';
 import React from 'react'
 import { GoArrowUpRight } from "react-icons/go";
 
 const Navbar = () => {
     return (
         <div className='flex justify-between items-center py-7  w-full'>
-            <div>
-                <h1 className='text-[26px] text-initial bg-gradient-white-top font-bold'>{`<Ayush Dixit />`}</h1>
-            </div>
+            <Link href={'/'}>
+                <h1 className='text-[26px] cursor-pointer text-initial bg-gradient-white-top font-bold'>{`<Ayush Dixit />`}</h1>
+            </Link>
             <div>
                 <nav>
                     <ul className='flex gap-8 '>
