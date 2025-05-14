@@ -1,20 +1,22 @@
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import StackIcon from "tech-stack-icons";
 
 export default function OrbitComponent() {
   return (
     <div className="relative flex h-full text-white w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={30}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
-        <Icons.whatsapp />
+        {/* <Icons.whatsapp /> */}
+        <StackIcon name="typescript" />
+        <StackIcon name="nodejs" />
+        <StackIcon name="mongodb" />
+        <StackIcon name="redis" />
+        <StackIcon name="docker" />
       </OrbitingCircles>
       <OrbitingCircles iconSize={24} radius={100} reverse speed={2}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
+        <StackIcon name="nextjs2" />
+        <StackIcon name="reactjs" />
+        <StackIcon name="redux" />
+        <StackIcon name="reactquery" />
       </OrbitingCircles>
     </div>
   );
