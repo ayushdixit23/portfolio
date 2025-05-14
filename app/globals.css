@@ -458,5 +458,5 @@ div[data-node-type="callout"] {
 }
 
 .line-background {
-  @apply bg-gradient-to-b from-white/5 to-stone-900 to 10%
+  @apply bg-gradient-to-b from-white/5 to-stone-900 
 }
