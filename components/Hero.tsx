@@ -22,37 +22,40 @@ const Hero = () => {
     const [scope, animate] = useAnimate();
     const [currentSentence, setCurrentSentence] = useState(0);
 
-    useEffect(() => {
-        let isCancelled = false;
+   useEffect(() => {
+    let isCancelled = false;
 
-        const loopAnimation = async () => {
-            await new Promise((resolve) => requestAnimationFrame(resolve));
+    const loopAnimation = async () => {
+        if (!scope.current) return; // prevent null error
 
-            await animate(
-                "span:not(.no-animate)",
-                { opacity: 1, y: 0, filter: "blur(0px)" },
-                { duration: 0.5, ease: "easeInOut", delay: stagger(0.05) }
-            );
+        await new Promise((resolve) => requestAnimationFrame(resolve));
 
-            await new Promise((resolve) => setTimeout(resolve, 2500));
+        // animate only spans inside the scoped element
+        await animate(
+            scope.current.querySelectorAll("span:not(.no-animate)"),
+            { opacity: 1, y: 0, filter: "blur(0px)" },
+            { duration: 0.5, ease: "easeInOut", delay: stagger(0.05) }
+        );
 
-            await animate(
-                "span:not(.no-animate)",
-                { opacity: 0, y: 20, filter: "blur(10px)" },
-                { duration: 0.3, delay: stagger(0.03) }
-            );
+        await new Promise((resolve) => setTimeout(resolve, 2500));
 
-            if (!isCancelled) {
-                setCurrentSentence((prev) => (prev + 1) % sentences.length);
-            }
-        };
+        await animate(
+            scope.current.querySelectorAll("span:not(.no-animate)"),
+            { opacity: 0, y: 20, filter: "blur(10px)" },
+            { duration: 0.3, delay: stagger(0.03) }
+        );
 
-        loopAnimation();
+        if (!isCancelled) {
+            setCurrentSentence((prev) => (prev + 1) % sentences.length);
+        }
+    };
 
-        return () => {
-            isCancelled = true;
-        };
-    }, [currentSentence]);
+    loopAnimation();
+
+    return () => {
+        isCancelled = true;
+    };
+}, [currentSentence, animate, scope]);
 
 
     return (
