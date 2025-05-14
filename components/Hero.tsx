@@ -86,7 +86,7 @@ const Hero = () => {
                                 <motion.span
                                     key={index}
                                     style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                                    className="inline-block mr-2 text-6xl text-initial bg-gradient-white-top text-center font-medium leading-snug"
+                                    className="inline-block px-2 text-6xl text-initial bg-gradient-white-top text-center font-medium leading-snug"
                                 >
                                     {word}
                                 </motion.span>
@@ -100,7 +100,7 @@ const Hero = () => {
                                 <motion.span
                                     key={index + 1000}
                                     style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                                    className=" text-initial inline-block mr-2 text-transparent bg-gradient-white-top text-center bg-clip-text font-medium leading-snug"
+                                    className=" text-initial mr-2 inline-block text-transparent bg-gradient-white-top text-center bg-clip-text font-medium leading-snug"
                                 >
                                     {word}
                                 </motion.span>
