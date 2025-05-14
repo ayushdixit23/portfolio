@@ -17,7 +17,7 @@ const Footer = () => {
         opacity: isInView ? 1 : 0,
         y: isInView ? 0 : 50,
       }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
     >
       © {currentYear} Ayush Dixit
     </motion.div>
