@@ -7,12 +7,12 @@ interface LineWithBeamProps {
 }
 
 const LineWithBeam = ({ positionClass }: LineWithBeamProps) => {
-    const containerRef = useRef<HTMLDivElement | null>(null); // Properly typing the ref
+    const containerRef = useRef<HTMLDivElement | null>(null); 
     const [height, setHeight] = useState<number>(0);
-    const [delay] = useState<number>(Math.random() * 0.8);
+    const [delay] = useState<number>(Math.random() * 1);
     useEffect(() => {
         if (containerRef.current) {
-            setHeight(containerRef.current.offsetHeight); // Getting the height properly
+            setHeight(containerRef.current.offsetHeight); 
         }
     }, []);
 
@@ -45,7 +45,7 @@ const LineWithBeam = ({ positionClass }: LineWithBeamProps) => {
 const AnimatedLines = () => {
     return (
         <>
-            {["-left-4", "left-[150px]", "-right-4", "right-[150px]"].map(
+            {["left-0", "left-[160px]", "right-0", "right-[160px]"].map(
                 (pos, idx) => (
                     <LineWithBeam key={idx} positionClass={pos} />
                 )

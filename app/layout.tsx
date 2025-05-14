@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={` bg-[#0A0A0C] antialiased max-w-[1300px] mx-auto select-none ${spaceGrotesk.className}`}
       >
-        {children}
+        {children }
       </body>
     </html>
   );
