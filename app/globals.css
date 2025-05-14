@@ -257,7 +257,8 @@
 }
 
 /* Lists with proper indentation and spacing */
-.blog-content ul, .blog-content ol {
+.blog-content ul,
+.blog-content ol {
   @apply my-6 pl-8;
 }
 
@@ -391,9 +392,14 @@ div[data-node-type="callout"] {
 
 .blog-content pre {
   @apply text-gray-100 select-all rounded-lg p-5 my-6 overflow-x-auto border border-gray-700/20 relative;
-  background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 52%, rgba(17, 17, 17, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(17, 17, 17, 1) 52%,
+    rgba(17, 17, 17, 1) 100%
+  );
   scrollbar-width: thin;
-  scrollbar-color: #4B5563 #111827; /* Use actual color codes instead of theme() */
+  scrollbar-color: #4b5563 #111827; /* Use actual color codes instead of theme() */
 }
 
 /* Inline code styling */
@@ -404,7 +410,8 @@ div[data-node-type="callout"] {
 /* Fix for code inside pre blocks */
 .blog-content pre code {
   @apply bg-transparent border-0 p-0 text-gray-100 text-base block;
-  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, monospace;
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, Monaco,
+    monospace;
   line-height: 1.6;
 }
 
@@ -430,7 +437,6 @@ div[data-node-type="callout"] {
   @apply block absolute top-1.5 right-3 text-xs text-gray-400 font-mono px-2 py-0.5 bg-gray-800/80 rounded uppercase tracking-wide;
   content: attr(data-language);
 }
-
 
 /* Code line numbering */
 .blog-content pre.line-numbers {
@@ -458,5 +464,16 @@ div[data-node-type="callout"] {
 }
 
 .line-background {
-  @apply bg-gradient-to-b from-white/5 to-stone-900 
+  @apply bg-gradient-to-b from-white/5 to-stone-900;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
