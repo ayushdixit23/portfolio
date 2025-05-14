@@ -4,7 +4,7 @@ import AboutMeGrid from "./AboutMeGrid";
 const About = () => {
   return (
     <>
-      <div className="mt-12 flex flex-col gap-[50px] w-full">
+      <div className="mt-[14vh] flex flex-col gap-[50px] w-full">
         <div className="flex flex-col gap-7 mx-auto max-w-[800px] h-full justify-center items-center">
           <h1 className="centralise-text text-initial bg-gradient-white-top">
             About Me
