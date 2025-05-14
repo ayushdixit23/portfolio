@@ -391,7 +391,6 @@ div[data-node-type="callout"] {
 
 .blog-content pre {
   @apply text-gray-100 select-all rounded-lg p-5 my-6 overflow-x-auto border border-gray-700/20 relative;
-
   background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 52%, rgba(17, 17, 17, 1) 100%);
   scrollbar-width: thin;
   scrollbar-color: #4B5563 #111827; /* Use actual color codes instead of theme() */
@@ -456,4 +455,8 @@ div[data-node-type="callout"] {
 /* Line highlighting */
 .blog-content pre .highlight-line {
   @apply bg-black/20 -mx-5 px-5 border-l-2 border-blue-500 block;
+}
+
+.line-background {
+  @apply bg-gradient-to-b from-white/5 to-stone-900 to 10%
 }
