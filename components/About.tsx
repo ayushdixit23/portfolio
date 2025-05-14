@@ -1,10 +1,19 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import AboutMeGrid from "./AboutMeGrid";
+import { motion, useInView } from "motion/react"
 
 const About = () => {
+  const ref = useRef(null);
+ const isInView = useInView(ref, { once: true });
   return (
     <>
-      <div className="mt-[14vh] flex flex-col gap-[50px] w-full">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50, scale: 0.95 }}
+        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="mt-[14vh] flex flex-col gap-[50px] w-full">
         <div className="flex flex-col gap-7 mx-auto max-w-[800px] h-full justify-center items-center">
           <h1 className="centralise-text text-initial bg-gradient-white-top">
             About Me
@@ -21,7 +30,7 @@ const About = () => {
           </div>
         </div>
         <AboutMeGrid />
-      </div>
+      </motion.div>
     </>
   );
 };

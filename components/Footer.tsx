@@ -1,12 +1,27 @@
-import React from 'react';
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-    return (
-        <div className='my-4 text-center text-white/70'>© {currentYear} Ayush Dixit</div>
+  const currentYear = new Date().getFullYear();
 
-    );
+  return (
+    <motion.div
+      ref={ref}
+      className="my-4 text-center text-white/70"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{
+        opacity: isInView ? 1 : 0,
+        y: isInView ? 0 : 50,
+      }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      © {currentYear} Ayush Dixit
+    </motion.div>
+  );
 };
 
 export default Footer;

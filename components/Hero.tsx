@@ -8,117 +8,125 @@ import { motion, stagger } from "motion/react";
 import { useAnimate } from "motion/react";
 
 const Hero = () => {
-    const sentences = [
-        "I’m Ayush, a MERN Stack Developer building scalable web solutions.",
-        "Crafting dynamic, scalable web apps with the MERN stack.",
-        "Let’s create high performance web experiences together.",
-    ];
-    const secondLineText = [
-        "Specializing in MongoDB, Express, React, and Node.js development.",
-        "Building scalable, efficient, and responsive web applications for you.",
-        "Transforming ideas into impactful and fast web applications."
-    ];
+  const sentences = [
+    "I’m Ayush, a MERN Stack Developer building scalable web solutions.",
+    "Crafting dynamic, scalable web apps with the MERN stack.",
+    "Let’s create high performance web experiences together.",
+  ];
+  const secondLineText = [
+    "Specializing in MongoDB, Express, React, and Node.js development.",
+    "Building scalable, efficient, and responsive web applications for you.",
+    "Transforming ideas into impactful and fast web applications.",
+  ];
 
-    const [scope, animate] = useAnimate();
-    const [currentSentence, setCurrentSentence] = useState(0);
+  const [scope, animate] = useAnimate();
+  const [currentSentence, setCurrentSentence] = useState(0);
 
-   useEffect(() => {
+  useEffect(() => {
     let isCancelled = false;
 
     const loopAnimation = async () => {
-        if (!scope.current) return; // prevent null error
+      if (!scope.current) return;
 
-        await new Promise((resolve) => requestAnimationFrame(resolve));
+      await new Promise((resolve) => requestAnimationFrame(resolve));
 
-        // animate only spans inside the scoped element
-        await animate(
-            scope.current.querySelectorAll("span:not(.no-animate)"),
-            { opacity: 1, y: 0, filter: "blur(0px)" },
-            { duration: 0.4, ease: "easeInOut", delay: stagger(0.05) }
-        );
+      await animate(
+        scope.current.querySelectorAll("span:not(.no-animate)"),
+        { opacity: 1, y: 0, filter: "blur(0px)" },
+        { duration: 0.4, ease: "easeInOut", delay: stagger(0.05) }
+      );
 
-        await new Promise((resolve) => setTimeout(resolve, 3500));
+      await new Promise((resolve) => setTimeout(resolve, 3500));
 
-        await animate(
-            scope.current.querySelectorAll("span:not(.no-animate)"),
-            { opacity: 0, y: 20, filter: "blur(10px)" },
-            { duration: 0.4, delay: stagger(0.05) }
-        );
+      await animate(
+        scope.current.querySelectorAll("span:not(.no-animate)"),
+        { opacity: 0, y: 20, filter: "blur(10px)" },
+        { duration: 0.4, delay: stagger(0.05) }
+      );
 
-        if (!isCancelled) {
-            setCurrentSentence((prev) => (prev + 1) % sentences.length);
-        }
+      if (!isCancelled) {
+        setCurrentSentence((prev) => (prev + 1) % sentences.length);
+      }
     };
 
     loopAnimation();
 
     return () => {
-        isCancelled = true;
+      isCancelled = true;
     };
-}, [currentSentence, animate, scope]);
+  }, [currentSentence, animate, scope]);
 
+  return (
+    <div className="flex h-[90vh] relative flex-col w-full">
+      <AnimatedLines />
+      <Navbar />
+      <div className="flex flex-col gap-8 h-full justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 25, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex gap-4 text-[15px]"
+        >
+          <RoleBadges text="Full-Stack Web Developer" />
+          <RoleBadges text="Frontend Developer" />
+          <RoleBadges text="Backend Developer" />
+        </motion.div>
 
-    return (
-        <div className="flex h-[90vh] relative flex-col w-full">
-            <AnimatedLines />
-            <Navbar />
-            <div className="flex flex-col gap-8 h-full justify-center items-center">
-                <div className="flex gap-4 text-[15px]">
-                    <RoleBadges text="Full-Stack Web Developer" />
-                    <RoleBadges text="Frontend Developer" />
-                    <RoleBadges text="Backend Developer" />
-                </div>
+        <div ref={scope} className="flex flex-col mt-3 gap-10">
+          <div className="w-full flex justify-center items-center">
+            <h1 className="text-6xl text-initial max-w-7xl bg-gradient-white-top text-center font-medium leading-snug">
+              <motion.span
+                key={0}
+                initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}
+                animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+                // no-animate
+                className="text-initial bg-gradient-to-r from-[#3ECF8E] to-[#4AD991] mr-2"
+              >
+                Hello!
+              </motion.span>
 
-                <div ref={scope} className="flex flex-col mt-3 gap-10">
-                    <div className="w-full flex justify-center items-center">
-                        <h1 className="text-6xl text-initial max-w-7xl bg-gradient-white-top text-center font-medium leading-snug">
-                            <motion.span
-                                key={0}
-                                initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                                animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-                                // no-animate 
-                                className="text-initial bg-gradient-to-r from-[#3ECF8E] to-[#4AD991] mr-2"
-                            >
-                                Hello!
-                            </motion.span>
+              {sentences[currentSentence].split(" ").map((word, index) => (
+                <motion.span
+                  key={index}
+                  style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
+                  className="inline-block px-2 text-6xl text-initial bg-gradient-white-top text-center font-medium leading-snug"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </h1>
+          </div>
 
-                            {sentences[currentSentence].split(" ").map((word, index) => (
-                                <motion.span
-                                    key={index}
-                                    style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                                    className="inline-block px-2 text-6xl text-initial bg-gradient-white-top text-center font-medium leading-snug"
-                                >
-                                    {word}
-                                </motion.span>
-                            ))}
-                        </h1>
-                    </div>
+          <div className="w-full flex justify-center items-center">
+            <p className="text-[32px] text-initial bg-gradient-white-top text-center font-medium leading-snug flex flex-wrap justify-center">
+              {secondLineText[currentSentence].split(" ").map((word, index) => (
+                <motion.span
+                  key={index + 1000}
+                  style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
+                  className=" text-initial mr-2 inline-block text-transparent bg-gradient-white-top text-center bg-clip-text font-medium leading-snug"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </p>
+          </div>
 
-                    <div className="w-full flex justify-center items-center">
-                        <p className="text-[32px] text-initial bg-gradient-white-top text-center font-medium leading-snug flex flex-wrap justify-center">
-                            {secondLineText[currentSentence].split(" ").map((word, index) => (
-                                <motion.span
-                                    key={index + 1000}
-                                    style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                                    className=" text-initial mr-2 inline-block text-transparent bg-gradient-white-top text-center bg-clip-text font-medium leading-snug"
-                                >
-                                    {word}
-                                </motion.span>
-                            ))}
-                        </p>
-                    </div>
-
-                    <div className="flex justify-center mt-3 items-center">
-                        <AnimatedButton>
-                            <div className="px-3 rounded-full text-white font-bold text-lg ">
-                                Contact Me
-                            </div>
-                        </AnimatedButton>
-                    </div>
-                </div>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.5 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex justify-center mt-3 items-center"
+          >
+            <AnimatedButton>
+              <div className="px-3 rounded-full text-white font-bold text-lg ">
+                Contact Me
+              </div>
+            </AnimatedButton>
+          </motion.div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
