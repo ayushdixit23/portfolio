@@ -9,13 +9,15 @@ import Project from "@/components/Project";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <GithubComponent/>
-      <Project />
-      <Blogs />
-      <Contact />
-      <Footer />
+      <div className={`h-full overflow-y-auto max-h-screen scrollbar-hide`}>
+        <Hero />
+        <About />
+        <GithubComponent />
+        <Project />
+        <Blogs />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }

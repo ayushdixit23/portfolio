@@ -34,15 +34,15 @@ const Hero = () => {
         await animate(
             scope.current.querySelectorAll("span:not(.no-animate)"),
             { opacity: 1, y: 0, filter: "blur(0px)" },
-            { duration: 0.5, ease: "easeInOut", delay: stagger(0.05) }
+            { duration: 0.4, ease: "easeInOut", delay: stagger(0.05) }
         );
 
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+        await new Promise((resolve) => setTimeout(resolve, 3500));
 
         await animate(
             scope.current.querySelectorAll("span:not(.no-animate)"),
             { opacity: 0, y: 20, filter: "blur(10px)" },
-            { duration: 0.3, delay: stagger(0.03) }
+            { duration: 0.4, delay: stagger(0.05) }
         );
 
         if (!isCancelled) {
