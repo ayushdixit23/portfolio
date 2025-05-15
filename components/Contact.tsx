@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div className="w-full flex-col flex justify-center my-16 items-center">
-      <div className="max-w-[85%] overflow-hidden relative">
+      <div className="sm:max-w-[85%] max-w-[95%] overflow-hidden relative">
         <motion.div
           ref={ref} // Attach the ref here
           className="absolute inset-0 bg-[url('/assets/grid.svg')] overflow-hidden -z-20 bg-center w-full"
@@ -43,7 +43,7 @@ const Contact = () => {
 
         <motion.div
           ref={ref} // Attach the ref here
-          className="flex flex-col gap-8 w-full z-20 py-16 border overflow-hidden rounded-3xl border-[#3ECF8E]/10 justify-center items-center shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)]"
+          className="flex flex-col gap-8 w-full z-20 px-5 py-8 sm:py-16 border overflow-hidden rounded-3xl border-[#3ECF8E]/10 justify-center items-center shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)]"
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
           animate={{
             opacity: isInView ? 1 : 0,
@@ -52,15 +52,15 @@ const Contact = () => {
           }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-initial z-10 centralise-text bg-gradient-white-top">
+          <h1 className="text-initial z-10 text-2xl sm:text-3xl md:text-4xl text-center font-medium bg-gradient-white-top">
             Let’s Build Something Great Together
           </h1>
-          <p className="text-[20px] z-10 text-center max-w-[90%] leading-snug text-white/70">
+          <p className="sm:text-[20px] leading-7 z-10 text-center sm:max-w-[90%] sm:leading-snug text-white/70">
             I’m always open to new opportunities, collaborations, or even a
             quick chat about tech. Whether you have a project in mind or just
             want to connect — I’d love to hear from you.
           </p>
-          <div className="flex justify-center items-center gap-5">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-5">
             <a
               href="https://mail.google.com/mail/?view=cm&to=fsayush100@gmail.com"
               target="_blank"
@@ -71,7 +71,7 @@ const Contact = () => {
               <div>Contact Me</div>
             </a>
 
-            <div className="flex gap-3 z-10 text-[#3ECF8E]">
+            <div className="flex gap-4 sm:gap-3 z-10 text-[#3ECF8E]">
               <SocialIcon
                 href="https://www.linkedin.com/in/ayushdixitdev/"
                 Icon={FaLinkedinIn}

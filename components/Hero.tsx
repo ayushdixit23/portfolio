@@ -72,9 +72,9 @@ const Hero = () => {
           <RoleBadges text="Backend Developer" isHidden />
         </motion.div>
 
-        <div ref={scope} className="flex flex-col mt-3 gap-10">
+        <div ref={scope} className="flex px-2 flex-col mt-3 gap-10">
           <div className="w-full flex justify-center items-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-initial sm:max-w-7xl bg-gradient-white-top text-center font-medium leading-snug">
+            <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl text-initial sm:max-w-7xl bg-gradient-white-top text-center font-medium sm:leading-snug">
               <motion.span
                 key={0}
                 initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}
@@ -89,7 +89,7 @@ const Hero = () => {
                 <motion.span
                   key={index}
                   style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                  className="inline-block px-2 text-initial bg-gradient-white-top text-center font-medium leading-snug"
+                  className="inline-block px-1 md:px-2 text-initial bg-gradient-white-top text-center font-medium sm:leading-snug"
                 >
                   {word}
                 </motion.span>
@@ -98,12 +98,12 @@ const Hero = () => {
           </div>
 
           <div className="w-full flex justify-center items-center">
-            <p className="text-lg sm:text-[26px] px-3 md:text-[32px] text-initial bg-gradient-white-top text-center font-medium leading-snug flex flex-wrap justify-center">
+            <p className="text-lg sm:text-[26px] px-3 md:text-[32px] text-initial bg-gradient-white-top text-center font-medium sm:leading-snug flex flex-wrap justify-center">
               {secondLineText[currentSentence].split(" ").map((word, index) => (
                 <motion.span
                   key={index + 1000}
                   style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                  className=" text-initial mr-2 inline-block text-transparent bg-gradient-white-top text-center bg-clip-text font-medium leading-snug"
+                  className=" text-initial px-1 md:mr-2 inline-block text-transparent bg-gradient-white-top text-center bg-clip-text font-medium sm:leading-snug"
                 >
                   {word}
                 </motion.span>
@@ -118,7 +118,7 @@ const Hero = () => {
             className="flex justify-center mt-3 items-center"
           >
             <AnimatedButton>
-              <div className="px-3 rounded-full text-white font-bold text-lg ">
+              <div className="px-3 rounded-full sm:text-lg text-white font-bold ">
                 Contact Me
               </div>
             </AnimatedButton>

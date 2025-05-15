@@ -96,7 +96,7 @@
 }
 
 .centralise-text {
-  @apply text-4xl text-center font-medium;
+  @apply text-3xl md:text-4xl text-center font-medium;
 }
 
 .shimmer::before {
