@@ -53,7 +53,7 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
             onClick={() => {
                 router.push(`/blog/${post.slug}`)
             }}
-            className={`border rounded-3xl border-[#3ECF8E]/10 shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)] flex flex-col gap-4 overflow-hidden ${isMain ? "p-3 h-full" : "p-2 h-full"
+            className={`border rounded-3xl border-[#3ECF8E]/10 shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)] flex flex-col gap-4 overflow-hidden ${isMain ? "p-2 sm:p-3 h-full" : "p-2 h-full"
                 }`}
             variants={variants}
             initial="hidden"
@@ -72,8 +72,8 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
                     className="w-full h-full object-cover"
                 />
             </div>
-            <div className={`p-3 flex flex-col ${isMain ? "gap-3" : "gap-2"}`}>
-                <div className={`${isMain ? "text-xl" : "text-lg"} text-white font-medium`}>
+            <div className={`p-2 sm:p-3 flex flex-col ${isMain ? "gap-3" : "gap-3 sm:gap-2"}`}>
+                <div className={`${isMain ? "sm:text-xl text-lg" : "text-lg"} text-white font-medium`}>
                     {post.title}
                 </div>
                 <p className={`${isMain ? "" : "text-sm"} text-white/70`}>
@@ -81,7 +81,7 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
                 </p>
                 <div className="flex mt-3 items-center gap-3">
                     <div
-                        className={`rounded-full overflow-hidden ${isMain ? "w-10 h-10" : "w-8 h-8"}`}
+                        className={`rounded-full overflow-hidden ${isMain ? "sm:w-10 sm:h-10 w-8 h-8" : "w-8 h-8"}`}
                     >
                         <img
                             src={post.author.profilePicture}

@@ -18,7 +18,7 @@ const About = () => {
           <h1 className="centralise-text text-initial bg-gradient-white-top">
             About Me
           </h1>
-          <p className=" px-3 text-center text-white/70">
+          <p className="text-[17px] md:text-[20px] md:leading-snug px-3 text-center text-white/70">
             Easy to pick up, highly extensible, and extremely scalable Paragon
             provides all the tools developers need to build integrations to
             spec.
