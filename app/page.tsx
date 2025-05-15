@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GithubComponent from "@/components/GithubComponent";
 import Hero from "@/components/Hero";
 import Project from "@/components/Project";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <About />
         <GithubComponent />
         {/* <Project /> */}
-        <Blogs />
+        <TechStack />
+        {/* <Blogs /> */}
         <Contact />
         <Footer />
       </div>
