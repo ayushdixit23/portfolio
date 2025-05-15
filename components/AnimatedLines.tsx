@@ -19,7 +19,7 @@ const LineWithBeam = ({ positionClass }: LineWithBeamProps) => {
     return (
         <div
             ref={containerRef}
-            className={`absolute ${positionClass} top-0 h-screen w-[2px] -z-30 line-background overflow-hidden`}
+            className={`absolute ${positionClass}  hidden sm:block top-0 h-[80vh] sm:h-screen w-[2px] -z-30 line-background overflow-hidden`}
         >
             <div className="absolute top-0 h-20 w-full z-10 pointer-events-none bg-gradient-to-b from-white/10 to-transparent backdrop-blur-xl" />
             <div className="absolute bottom-0 h-10 w-full z-10 pointer-events-none bg-gradient-to-b from-black/30 to-transparent backdrop-blur-xl" />

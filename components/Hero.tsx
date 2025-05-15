@@ -57,10 +57,10 @@ const Hero = () => {
   }, [currentSentence, animate, scope]);
 
   return (
-    <div className="flex h-[90vh] relative flex-col w-full">
+    <div className="flex sm:h-[90vh] relative flex-col w-full">
       <AnimatedLines />
       <Navbar />
-      <div className="flex flex-col gap-8 h-full justify-center items-center">
+      <div className="flex flex-col mt-8 sm:mt-0 gap-5 sm:gap-8 h-full justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 25, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -68,13 +68,13 @@ const Hero = () => {
           className="flex gap-4 text-[15px]"
         >
           <RoleBadges text="Full-Stack Web Developer" />
-          <RoleBadges text="Frontend Developer" />
-          <RoleBadges text="Backend Developer" />
+          <RoleBadges text="Frontend Developer" isHidden />
+          <RoleBadges text="Backend Developer" isHidden />
         </motion.div>
 
         <div ref={scope} className="flex flex-col mt-3 gap-10">
           <div className="w-full flex justify-center items-center">
-            <h1 className="text-6xl text-initial max-w-7xl bg-gradient-white-top text-center font-medium leading-snug">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-initial sm:max-w-7xl bg-gradient-white-top text-center font-medium leading-snug">
               <motion.span
                 key={0}
                 initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}
@@ -89,7 +89,7 @@ const Hero = () => {
                 <motion.span
                   key={index}
                   style={{ filter: "blur(10px)", opacity: 0, y: 10 }}
-                  className="inline-block px-2 text-6xl text-initial bg-gradient-white-top text-center font-medium leading-snug"
+                  className="inline-block px-2 text-initial bg-gradient-white-top text-center font-medium leading-snug"
                 >
                   {word}
                 </motion.span>
@@ -98,7 +98,7 @@ const Hero = () => {
           </div>
 
           <div className="w-full flex justify-center items-center">
-            <p className="text-[32px] text-initial bg-gradient-white-top text-center font-medium leading-snug flex flex-wrap justify-center">
+            <p className="text-lg sm:text-[26px] px-3 md:text-[32px] text-initial bg-gradient-white-top text-center font-medium leading-snug flex flex-wrap justify-center">
               {secondLineText[currentSentence].split(" ").map((word, index) => (
                 <motion.span
                   key={index + 1000}

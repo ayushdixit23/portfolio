@@ -16,7 +16,7 @@ export default function Home() {
         <GithubComponent />
         {/* <Project /> */}
         <TechStack />
-        {/* <Blogs /> */}
+        <Blogs />
         <Contact />
         <Footer />
       </div>
