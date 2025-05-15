@@ -25,11 +25,11 @@ const BlogsPostHero = () => {
   const [mainPost, ...otherPosts] = posts;
 
   return (
-    <div className="text-white/70 flex px-4 py-8 w-full gap-4">
-      <div className="h-[750px] w-[62%]">
+    <div className="text-white/70 grid grid-cols-1 lg:flex px-4 py-8 w-full gap-4">
+      <div className="lg:h-[750px] lg:w-[62%]">
         <BlogCard post={mainPost} isMain />
       </div>
-      <div className="h-[750px] flex flex-col gap-4 w-[38%]">
+      <div className="lg:h-[750px] flex w-full sm:max-lg:flex-row flex-col gap-4 lg:w-[38%]">
         {otherPosts.slice(0, 2).map((post: any) => (
           <BlogCard key={post.slug} post={post} />
         ))}

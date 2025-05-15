@@ -21,28 +21,29 @@ const AboutMeGrid = () => {
       {/* Mobile And Desktop */}
       <div className="grid grid-cols-1 sm:max-lg:hidden lg:grid-cols-3 px-3 gap-4 w-full">
         <div className="flex flex-col gap-4 w-full">
-          <div className="w-full h-[300px] md:h-[260px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+          <div className="w-full h-[300px] md:h-[260px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <IconCloudDemo />
           </div>
 
-          <div className="w-full h-[360px] md:h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+          <div className="w-full h-[360px] md:h-[380px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <Globe />
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="w-full  md:h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+          <div className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <TerminalComponent />
           </div>
 
-          <div className="w-full  md:h-[320px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+          <div className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <AnimationBeamComponent />
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="w-full  md:h-[380px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
-            <OrbitComponent /> </div>
+          <div className="w-full h-[380px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+            <OrbitComponent />
+          </div>
 
-          <div className="w-full  md:h-[260px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
+          <div className="w-full md:h-[260px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.02] hover:shadow-xl will-change-transform">
             <CodeComponent />
           </div>
         </div>

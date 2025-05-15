@@ -18,7 +18,7 @@ import code from "@/public/assets/codesnippet.png"
 
 const CodeComponent = () => {
     return (
-        <div className="w-full h-full overflow-hidden rounded-3xl border border-white/20 shadow-lg">
+        <div className="w-full h-full overflow-hidden rounded-3xl ">
             <Image src={code} alt='code' className='w-full h-full object-cover' />
         </div>
     );
