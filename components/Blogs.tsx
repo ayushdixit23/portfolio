@@ -20,9 +20,7 @@ const Blogs = () => {
           My Blogs
         </h1>
         <p className="text-[17px] md:text-[20px] md:leading-snug px-3 text-center text-white/70">
-          From sleek user interfaces to full-scale applications, here's a
-          selection of projects I’m most proud of. Each one tells a story of
-          creativity, code, and real-world impact.
+          I write about what I learn — from web development to DSA and more. Simple posts, honest thoughts, and things worth sharing as I grow.
         </p>
       </div>
       <BlogsPostHero />

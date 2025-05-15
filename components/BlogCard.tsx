@@ -53,7 +53,7 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
             onClick={() => {
                 router.push(`/blog/${post.slug}`)
             }}
-            className={`border rounded-3xl border-[#3ECF8E]/10 shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)] flex flex-col gap-4 overflow-hidden ${isMain ? "p-2 sm:p-3 h-full" : "p-2 h-full"
+            className={`border cursor-pointer rounded-3xl border-[#3ECF8E]/10 shadow-[inset_0px_32px_64px_0px_rgba(62,207,142,0.08),inset_1px_1px_1px_-0.5px_rgba(62,207,142,0.50),inset_0px_0px_1px_0px_rgba(255,255,255,0.40)] flex flex-col gap-4 overflow-hidden ${isMain ? "p-2 sm:p-3 h-full" : "p-2 h-full"
                 }`}
             variants={variants}
             initial="hidden"
