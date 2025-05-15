@@ -9,14 +9,15 @@ import { useAnimate } from "motion/react";
 
 const Hero = () => {
   const sentences = [
-    "I’m Ayush, a MERN Stack Developer building scalable web solutions.",
-    "Crafting dynamic, scalable web apps with the MERN stack.",
-    "Let’s create high performance web experiences together.",
+    "I'm Ayush, a MERN Stack Developer building scalable web apps.",
+    "I craft full-stack, high-performance web applications daily.",
+    "Let's build fast, user-focused web experiences together.",
   ];
+
   const secondLineText = [
     "Specializing in MongoDB, Express, React, and Node.js development.",
-    "Building scalable, efficient, and responsive web applications for you.",
-    "Transforming ideas into impactful and fast web applications.",
+    "Delivering clean, scalable code with modern JavaScript tools.",
+    "Transforming ideas into smooth and powerful web apps.",
   ];
 
   const [scope, animate] = useAnimate();
