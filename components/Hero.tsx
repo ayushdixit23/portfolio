@@ -57,10 +57,10 @@ const Hero = () => {
   }, [currentSentence, animate, scope]);
 
   return (
-    <div className="flex sm:h-[90vh] relative flex-col w-full">
+    <div className="flex md:h-[90vh] relative flex-col w-full">
       <AnimatedLines />
       <Navbar />
-      <div className="flex flex-col mt-8 sm:mt-0 gap-5 sm:gap-8 h-full justify-center items-center">
+      <div className="flex flex-col mt-8 md:mt-0 gap-5 md:gap-8 h-full justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 25, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -74,7 +74,7 @@ const Hero = () => {
 
         <div ref={scope} className="flex px-2 flex-col mt-3 gap-10">
           <div className="w-full flex justify-center items-center">
-            <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl text-initial sm:max-w-7xl bg-gradient-white-top text-center font-medium sm:leading-snug">
+            <h1 className="text-[28px] sm:text-4xl md:text-[45px] lg:text-6xl text-initial sm:max-w-7xl bg-gradient-white-top text-center font-medium sm:leading-snug">
               <motion.span
                 key={0}
                 initial={{ filter: "blur(10px)", opacity: 0, y: 10 }}

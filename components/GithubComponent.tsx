@@ -32,7 +32,7 @@ const GithubStatsSection = () => {
             variants={container}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="w-full py-16 text-white/70 px-6"
+            className="w-full py-16 text-white/70 px-3 sm:px-6"
         >
             <motion.h2
                 variants={item}

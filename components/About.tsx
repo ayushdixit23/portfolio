@@ -13,7 +13,7 @@ const About = () => {
         initial={{ opacity: 0, y: 50, scale: 0.95 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mt-[14vh] flex flex-col gap-[50px] w-full">
+        className="mt-[14vh] flex flex-col gap-[20px] sm:gap-[50px] w-full">
         <div className="flex flex-col gap-7 mx-auto max-w-[800px] h-full justify-center items-center">
           <h1 className="centralise-text text-initial bg-gradient-white-top">
             About Me

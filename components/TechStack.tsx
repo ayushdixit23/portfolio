@@ -60,10 +60,10 @@ const techStack = [
 
 const TechStackIcons: FC = () => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+  const isInView = useInView(containerRef, { once: true });
 
   return (
-    <div className="text-white/80 py-12 px-6 mb-12">
+    <div className="text-white/80 py-12 px-4 sm:px-6 mb-12">
       <motion.div
         ref={containerRef}
         initial="hidden"
@@ -78,7 +78,7 @@ const TechStackIcons: FC = () => {
             },
           },
         }}
-        className="max-w-6xl mx-auto flex flex-wrap justify-center gap-4"
+        className="sm:max-w-6xl sm:mx-auto flex flex-wrap justify-center gap-4"
       >
         {techStack.map((tech, index) => (
           <motion.div
@@ -105,9 +105,9 @@ const TechStackIcons: FC = () => {
               scale: 1.05,
               transition: { duration: 0.2 },
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-zinc-900 rounded-xl border border-zinc-800"
+            className="flex items-center gap-2 py-2 px-4 bg-zinc-900 rounded-xl border border-zinc-800"
           >
-            <div className="text-2xl">{tech.icon}</div>
+            <div className="text-lg sm:text-2xl">{tech.icon}</div>
             <div className="text-sm font-medium">{tech.label}</div>
           </motion.div>
         ))}
@@ -137,7 +137,7 @@ const TechStack: FC = () => {
             }
           : {}
       }
-      className="mt-12 flex flex-col w-full "
+      className="mt-4 flex flex-col w-full "
     >
       <div className="flex flex-col gap-7 mx-auto max-w-4xl h-full justify-center items-center">
         <motion.h1
@@ -153,7 +153,7 @@ const TechStack: FC = () => {
                 }
               : {}
           }
-          className="centralise-text text-initial bg-gradient-white-top text-3xl font-bold"
+          className="centralise-text text-initial bg-gradient-white-top font-bold"
         >
           My Tech Stack
         </motion.h1>
