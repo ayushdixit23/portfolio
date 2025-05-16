@@ -58,7 +58,7 @@ const Hero = () => {
   }, [currentSentence, animate, scope]);
 
   return (
-    <div className="flex md:h-[90vh] relative flex-col w-full">
+    <div id="home" className="flex md:h-[90vh] relative flex-col w-full">
       <AnimatedLines />
       <Navbar />
       <div className="flex flex-col mt-8 md:mt-0 gap-5 md:gap-8 h-full justify-center items-center">

@@ -8,6 +8,7 @@ const Blogs = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <motion.div
+      id="blog"
       ref={ref}
       className="sm:mt-6 flex flex-col gap-[50px] w-full"
       initial={{ opacity: 0, scale: 0.8 }}

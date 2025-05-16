@@ -29,7 +29,10 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="w-full flex-col flex justify-center my-8 sm:my-16 items-center">
+    <div
+      id="contact"
+      className="w-full flex-col flex justify-center my-8 sm:my-16 items-center"
+    >
       <div className="sm:max-w-[85%] max-w-[95%] overflow-hidden relative">
         <motion.div
           ref={ref} // Attach the ref here

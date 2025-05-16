@@ -9,6 +9,10 @@
   --breakpoint-3xl: 120rem;
 } */
 
+html { scroll-behavior: smooth !important; }
+body { scroll-behavior: smooth !important; }
+
+
 @theme inline {
 
   --color-background: var(--background);
@@ -506,3 +510,5 @@ div[data-node-type="callout"] {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+
