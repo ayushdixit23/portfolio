@@ -29,7 +29,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full h-[300px] md:h-[260px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full h-[300px] md:h-[260px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <IconCloudDemo />
           </motion.div>
@@ -40,7 +40,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full h-[360px] md:h-[380px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full h-[360px] md:h-[380px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <Globe />
           </motion.div>
@@ -52,7 +52,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <TerminalComponent />
           </motion.div>
@@ -63,7 +63,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full  md:h-[320px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <AnimationBeamComponent />
           </motion.div>
@@ -75,7 +75,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full h-[380px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full h-[380px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <OrbitComponent />
           </motion.div>
@@ -86,7 +86,7 @@ const AboutMeGrid = () => {
               boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="w-full md:h-[260px] rounded-3xl border border-white/10 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="w-full md:h-[260px] rounded-3xl border border-white/10 overflow-hidden"
           >
             <CodeComponent />
           </motion.div>
@@ -101,7 +101,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full h-[350px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full h-[350px] rounded-3xl border border-white/20 overflow-hidden"
+        >
           <IconCloudDemo />
         </motion.div>
 
@@ -111,7 +112,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden"
+        >
           <Globe />
         </motion.div>
 
@@ -121,7 +123,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full  h-[350px] rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full  h-[350px] rounded-3xl border border-white/20 overflow-hidden"
+        >
           <TerminalComponent />
         </motion.div>
 
@@ -131,7 +134,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden"
+        >
           <AnimationBeamComponent />
         </motion.div>
 
@@ -141,7 +145,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden"
+        >
           <OrbitComponent />{" "}
         </motion.div>
 
@@ -151,7 +156,8 @@ const AboutMeGrid = () => {
             boxShadow: `0 10px 25px -5px ${color}20`,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform">
+          className="w-full h-[350px]  rounded-3xl border border-white/20 overflow-hidden"
+        >
           <CodeComponent />
         </motion.div>
       </div>
