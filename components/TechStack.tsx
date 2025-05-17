@@ -1,7 +1,6 @@
 "use client";
-
 import React, { FC, useRef } from "react";
-import { motion, useInView, stagger, animate } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -30,6 +29,8 @@ import {
   SiPnpm,
   SiRedux,
 } from "react-icons/si";
+
+const color = "#4AD991";
 
 const techStack = [
   { icon: <FaHtml5 className="text-orange-500" />, label: "HTML" },
@@ -104,6 +105,7 @@ const TechStackIcons: FC = () => {
               y: -5,
               scale: 1.05,
               transition: { duration: 0.2 },
+              boxShadow: `0 10px 25px -5px ${color}20`,
             }}
             className="flex items-center gap-2 py-2 px-4 bg-zinc-900 rounded-xl border border-zinc-800"
           >
