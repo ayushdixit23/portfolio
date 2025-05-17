@@ -33,7 +33,7 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
         text.length > maxLength ? text.slice(0, maxLength).trim() + "..." : text;
 
     const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: true });
     const controls = useAnimation();
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const BlogCard = ({ post, isMain = false }: BlogCardProps) => {
     return (
 
         <motion.div
-        ref={ref}
+            ref={ref}
             onClick={() => {
                 router.push(`/blog/${post.slug}`)
             }}

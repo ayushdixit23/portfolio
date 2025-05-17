@@ -22,6 +22,8 @@ const item = {
     },
 };
 
+const color = "#4AD991"
+
 const GithubStatsSection = () => {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true });
@@ -44,12 +46,18 @@ const GithubStatsSection = () => {
             <div className="grid grid-cols-1 mt-12 md:grid-cols-6 lg:grid-cols-10 gap-6">
                 <motion.div
                     variants={item}
-                    className="border border-white/10 rounded-3xl col-span-full p-6"
+                    whileHover={{
+                        y: -5,
+                        boxShadow: `0 10px 25px -5px ${color}20`,
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="border border-white/5 rounded-3xl col-span-full p-6"
                 >
                     <h3 className="text-lg font-medium mb-4 text-white/90">
                         Contribution Calendar
                     </h3>
-                    <div className="w-full flex justify-center items-center overflow-x-auto">
+                    <div
+                        className="w-full flex justify-center items-center overflow-x-auto">
                         <GitHubCalendar
                             username="ayushdixit23"
                             blockSize={18}
@@ -78,8 +86,13 @@ const GithubStatsSection = () => {
                 </motion.div>
 
                 <motion.div
+                    whileHover={{
+                        y: -5,
+                        boxShadow: `0 10px 25px -5px ${color}20`,
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     variants={item}
-                    className="border border-white/10 rounded-3xl md:col-span-3 lg:col-span-4 flex flex-col"
+                    className="border border-white/5 rounded-3xl md:col-span-3 lg:col-span-4 flex flex-col"
                 >
                     <div className="p-6 pb-3">
                         <h3 className="text-lg font-medium mb-2 text-white/90">
@@ -99,8 +112,13 @@ const GithubStatsSection = () => {
                 </motion.div>
 
                 <motion.div
+                    whileHover={{
+                        y: -5,
+                        boxShadow: `0 10px 25px -5px ${color}20`,
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     variants={item}
-                    className="border border-white/10 rounded-3xl md:col-span-3 lg:col-span-3 flex flex-col"
+                    className="border border-white/5 rounded-3xl md:col-span-3 lg:col-span-3 flex flex-col"
                 >
                     <div className="p-6 pb-3">
                         <h3 className="text-lg font-medium mb-2 text-white/90">
@@ -120,8 +138,13 @@ const GithubStatsSection = () => {
                 </motion.div>
 
                 <motion.div
+                    whileHover={{
+                        y: -5,
+                        boxShadow: `0 10px 25px -5px ${color}20`,
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     variants={item}
-                    className="border border-white/10 rounded-3xl md:col-span-6 lg:col-span-3 flex flex-col"
+                    className="border border-white/5 rounded-3xl md:col-span-6 lg:col-span-3 flex flex-col"
                 >
                     <div className="p-6 pb-3">
                         <h3 className="text-lg font-medium mb-2 text-white/90">

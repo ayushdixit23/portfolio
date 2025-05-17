@@ -102,7 +102,6 @@ const LeetCodeStats = () => {
         );
     }
 
-    // Completion data
     const completionData = {
         labels: ["Completed", "Remaining"],
         datasets: [
@@ -148,14 +147,10 @@ const LeetCodeStats = () => {
 
     return (
         <div className="min-h-screen" style={{ backgroundColor: colors.bgPrimary }}>
-
-
-            {/* Main content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <h1 className="centralise-text pb-16 text-initial bg-gradient-white-top">
                     LeetCode Stats
                 </h1>
-                {/* Stats Overview */}
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 text-white"
                     initial={{ opacity: 0 }}
@@ -249,17 +244,17 @@ const LeetCodeStats = () => {
                         <motion.div
                             key={index}
                             whileHover={{
-                                y: -8,
+                                y: -5,
                                 boxShadow: `0 10px 25px -5px ${colors.accent}20`,
                             }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                            className="rounded-2xl p-6 relative overflow-hidden"
-                            style={{ backgroundColor: colors.bgSecondary }}
+                            className="rounded-2xl p-6 relative overflow-hidden border border-white/5"
+                            // style={{ backgroundColor: colors.bgSecondary }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
+                            {/* <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div> */}
 
                             <div className="relative z-10">
                                 <div className="flex justify-between items-start">
@@ -301,16 +296,16 @@ const LeetCodeStats = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
 
-                        className="rounded-2xl overflow-hidden relative"
-                        style={{ backgroundColor: colors.bgSecondary }}
+                        className="rounded-2xl overflow-hidden relative border border-white/5"
+                        // style={{ backgroundColor: colors.bgSecondary }}
                         whileHover={{
-                            y: -8,
+                            y: -5,
                             boxShadow: `0 10px 25px -5px ${colors.accent}20`,
                         }}
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
+                        {/* <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div> */}
 
                         <div className="p-6 relative z-10 text-white">
                             <div className="flex items-center justify-between mb-6">
@@ -430,21 +425,20 @@ const LeetCodeStats = () => {
                         </div>
                     </motion.div>
 
-                    {/* Progress Breakdown */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
 
-                        className="rounded-2xl overflow-hidden relative"
-                        style={{ backgroundColor: colors.bgSecondary }}
+                        className="rounded-2xl overflow-hidden relative border border-white/5"
+                        // style={{ backgroundColor: colors.bgSecondary }}
                         whileHover={{
-                            y: -8,
+                            y: -5,
                             boxShadow: `0 10px 25px -5px ${colors.accent}20`,
                         }}
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
+                        {/* <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10"></div>
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600"></div> */}
 
                         <div className="p-6 relative z-10">
                             <div className="flex items-center justify-between mb-6 text-white">
