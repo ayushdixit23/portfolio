@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import GithubComponent from "@/components/GithubComponent";
 import Hero from "@/components/Hero";
+import LeetCodeStats from "@/components/LeetcodeStats";
 // import Project from "@/components/Project";
 import TechStack from "@/components/TechStack";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <About />
         <GithubComponent />
+        <LeetCodeStats/>
         {/* <Project /> */}
         <TechStack />
         <Blogs />
